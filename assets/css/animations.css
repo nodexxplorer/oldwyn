@@ -1,0 +1,80 @@
+/* Fade In Up Animation for Hero Text/Button */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 1s ease-out forwards;
+    opacity: 0; /* Hidden by default */
+}
+
+/* Delay for sequential animations */
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+
+/* Scroll Reveal Animations (using JavaScript to add 'revealed' class) */
+/* Fade In */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.animate-scroll-reveal {
+    opacity: 0;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.animate-scroll-reveal.revealed {
+    opacity: 1;
+}
+
+/* Slide In Left */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.animate-scroll-reveal.slide-in-left.revealed {
+    animation: slideInLeft 0.8s ease-out forwards;
+}
+
+/* Slide In Right */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.animate-scroll-reveal.slide-in-right.revealed {
+    animation: slideInRight 0.8s ease-out forwards;
+}
+
+/* Slide In Up */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.animate-scroll-reveal.slide-in-up.revealed {
+    animation: slideInUp 0.8s ease-out forwards;
+}

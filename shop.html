@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oldwyn - Shop Our Collections</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="assets/assets/logooldwyn.jpg" alt="Oldwyn Logo">
+                <span>OLDWYN</span>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="shop.html" class="active">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <button class="icon-btn search-btn" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                    <i class="fas fa-microphone voice-search-icon"></i>
+                </button>
+                <a href="cart.html" class="icon-btn cart-btn" aria-label="Shopping Cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="wishlist.html" class="icon-btn wishlist-btn" aria-label="My Wishlist">
+                    <i class="fas fa-heart"></i>
+                    <span class="wishlist-count">0</span>
+                </a>
+                <a href="login.html" class="icon-btn login-btn" aria-label="Login">
+                    <i class="fas fa-user-circle"></i>
+                </a>
+                <button class="hamburger-menu" aria-label="Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-nav-overlay">
+            <div class="mobile-nav-drawer glassmorphism">
+                <button class="close-mobile-nav-btn" aria-label="Close Mobile Menu">
+                    <i class="fas fa-times"></i>
+                </button>
+                <nav class="mobile-nav">
+                    <ul>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="wishlist.html"><i class="fas fa-heart"></i> My Wishlist</a></li>
+                        <li><a href="login.html"><i class="fas fa-user-circle"></i> Login / Register</a></li>
+                    </ul>
+                </nav>
+                <div class="drawer-footer">
+                    <p>&copy; 2025 Oldwyn</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="shop-hero-banner">
+            <div class="container">
+                <h1 class="animate-fade-in-up">Our Collections</h1>
+                <p class="animate-fade-in-up delay-1">Explore the artistry of senator-style traditional outfits.</p>
+            </div>
+        </section>
+
+        <section class="shop-content container">
+            <aside class="shop-sidebar animate-scroll-reveal slide-in-left glassmorphism">
+                <h2>Filters</h2>
+
+                <div class="filter-group">
+                    <h3>Category</h3>
+                    <ul>
+                        <li><label><input type="checkbox" checked> All Outfits</label></li>
+                        <li><label><input type="checkbox"> Classic Series</label></li>
+                        <li><label><input type="checkbox"> Modern Fusion</label></li>
+                        <li><label><input type="checkbox"> Luxury Line</label></li>
+                        <li><label><input type="checkbox"> Special Editions</label></li>
+                    </ul>
+                </div>
+
+                <div class="filter-group">
+                    <h3>Size</h3>
+                    <div class="size-options">
+                        <label><input type="radio" name="size" value="S"><span>S</span></label>
+                        <label><input type="radio" name="size" value="M"><span>M</span></label>
+                        <label><input type="radio" name="size" value="L"><span>L</span></label>
+                        <label><input type="radio" name="size" value="XL"><span>XL</span></label>
+                        <label><input type="radio" name="size" value="XXL"><span>XXL</span></label>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h3>Price Range</h3>
+                    <div class="price-range-slider">
+                        <input type="range" min="50" max="1000" value="50" class="slider" id="minPrice">
+                        <input type="range" min="50" max="1000" value="1000" class="slider" id="maxPrice">
+                        <p>Price: $<span id="minPriceValue">50</span> - $<span id="maxPriceValue">1000</span></p>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h3>Color</h3>
+                    <div class="color-options">
+                        <span class="color-box" style="background-color: #000;" data-color="black" title="Black"></span>
+                        <span class="color-box" style="background-color: #6A0572;" data-color="purple" title="Purple"></span>
+                        <span class="color-box" style="background-color: #A0522D;" data-color="sienna" title="Sienna"></span>
+                        <span class="color-box" style="background-color: #004d40;" data-color="dark-teal" title="Dark Teal"></span>
+                        <span class="color-box" style="background-color: #8B0000;" data-color="dark-red" title="Dark Red"></span>
+                        <span class="color-box" style="background-color: #2F4F4F;" data-color="dark-slate-gray" title="Dark Slate Gray"></span>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary filter-apply-btn">Apply Filters</button>
+            </aside>
+
+            <div class="product-grid">
+                <div class="product-card animate-scroll-reveal slide-in-up" data-delay="0.1">
+                    <a href="product.html">
+                        <img src="assets/assets/pics28.jpg" alt="Classic Gold Senator">
+                        <div class="product-info">
+                            <h3>Classic Gold Senator</h3>
+                            <p class="product-price">₦85,000</p>
+                        </div>
+                    </a>
+                    <button class="add-to-cart-btn btn btn-secondary"><i class="fas fa-plus"></i> Add to Cart</button>
+                </div>
+
+                <div class="product-card animate-scroll-reveal slide-in-up" data-delay="0.2">
+                    <a href="product.html">
+                        <img src="assets/assets/pics25.jpg" alt="Regal Blue Senator">
+                        <div class="product-info">
+                            <h3>Regal Blue Senator</h3>
+                            <p class="product-price">₦92,500</p>
+                        </div>
+                    </a>
+                    <button class="add-to-cart-btn btn btn-secondary"><i class="fas fa-plus"></i> Add to Cart</button>
+                </div>
+
+                <div class="product-card animate-scroll-reveal slide-in-up" data-delay="0.3">
+                    <a href="product.html">
+                        <img src="assets/assets/pics13.jpg" alt="Emerald Green Design">
+                        <div class="product-info">
+                            <h3>Emerald Green Design</h3>
+                            <p class="product-price">₦78,000</p>
+                        </div>
+                    </a>
+                    <button class="add-to-cart-btn btn btn-secondary"><i class="fas fa-plus"></i> Add to Cart</button>
+                </div>
+
+                <div class="product-card animate-scroll-reveal slide-in-up" data-delay="0.4">
+                    <a href="product.html">
+                        <img src="assets/assets/pics20.jpg" alt="Modern Black Elegance">
+                        <div class="product-info">
+                            <h3>Modern Black Elegance</h3>
+                            <p class="product-price">₦95,000</p>
+                        </div>
+                    </a>
+                    <button class="add-to-cart-btn btn btn-secondary"><i class="fas fa-plus"></i> Add to Cart</button>
+                </div>
+
+                <div class="product-card animate-scroll-reveal slide-in-up" data-delay="0.5">
+                    <a href="product.html">
+                        <img src="assets/assets/pics31.jpg" alt="Traditional  Motif">
+                        <div class="product-info">
+                            <h3>Traditional Motif</h3>
+                            <p class="product-price">₦81,000</p>
+                        </div>
+                    </a>
+                    <button class="add-to-cart-btn btn btn-secondary"><i class="fas fa-plus"></i> Add to Cart</button>
+                </div>
+
+                <div class="product-card animate-scroll-reveal slide-in-up" data-delay="0.6">
+                    <a href="product.html">
+                        <img src="assets/assets/pics24.jpg" alt="Sophisticated Gray Senator">
+                        <div class="product-info">
+                            <h3>Sophisticated Gray Senator</h3>
+                            <p class="product-price">₦88,000</p>
+                        </div>
+                    </a>
+                    <button class="add-to-cart-btn btn btn-secondary"><i class="fas fa-plus"></i> Add to Cart</button>
+                </div>
+
+                </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-section footer-brand">
+                <a href="index.html" class="logo">
+                    <img src="assets/assets/logooldwyn.jpg" alt="Oldwyn Logo">
+                    <span>OLDWYN</span>
+                </a>
+                <p>"Tradition Elevated."</p>
+            </div>
+            <div class="footer-section footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section footer-newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for exclusive offers and new arrivals.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+            <div class="footer-section footer-social">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="https://instagram.com/oldwyn1" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/share/1BxHimutCW" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Oldwyn. All rights reserved.</p>
+        </div>
+    </footer>
+    <div id="custom-toast" class="custom-toast">
+        <i class="fas fa-check-circle toast-icon"></i>
+        <span class="toast-message"></span>
+    </div>
+    <div class="search-overlay">
+        <div class="search-overlay-content glassmorphism">
+            <button class="close-search-btn" aria-label="Close Search"><i class="fas fa-times"></i></button>
+            <input type="text" class="search-input" placeholder="Search for outfits, categories...">
+            <button class="search-overlay-submit-btn"><i class="fas fa-search"></i></button>
+            <button class="voice-search-overlay-btn" aria-label="Voice Search">
+                <i class="fas fa-microphone"></i>
+                <span>Speak your search...</span>
+            </button>
+        </div>
+    </div>
+
+    <div id="custom-toast" class="custom-toast">
+        <i class="fas fa-check-circle toast-icon"></i>
+        <span class="toast-message"></span>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Shop Page specific JS
+        document.addEventListener('DOMContentLoaded', () => {
+            const minPriceInput = document.getElementById('minPrice');
+            const maxPriceInput = document.getElementById('maxPrice');
+            const minPriceValue = document.getElementById('minPriceValue');
+            const maxPriceValue = document.getElementById('maxPriceValue');
+
+            function updatePriceRange() {
+                minPriceValue.textContent = minPriceInput.value;
+                maxPriceValue.textContent = maxPriceInput.value;
+                // Ensure min is not greater than max
+                if (parseInt(minPriceInput.value) > parseInt(maxPriceInput.value)) {
+                    minPriceInput.value = maxPriceInput.value;
+                    minPriceValue.textContent = maxPriceInput.value;
+                }
+                if (parseInt(maxPriceInput.value) < parseInt(minPriceInput.value)) {
+                    maxPriceInput.value = minPriceInput.value;
+                    maxPriceValue.textContent = minPriceInput.value;
+                }
+            }
+
+            if (minPriceInput && maxPriceInput) {
+                minPriceInput.addEventListener('input', updatePriceRange);
+                maxPriceInput.addEventListener('input', updatePriceRange);
+                updatePriceRange(); // Initial update
+            }
+
+            // Color option selection
+            const colorBoxes = document.querySelectorAll('.color-box');
+            colorBoxes.forEach(box => {
+                box.addEventListener('click', () => {
+                    colorBoxes.forEach(b => b.classList.remove('selected'));
+                    box.classList.add('selected');
+                    // Use custom toast instead of alert
+                    window.showToast(`Color selected: ${box.dataset.color.charAt(0).toUpperCase() + box.dataset.color.slice(1)}`);
+                });
+            });
+
+            // Size option selection
+            const sizeOptions = document.querySelectorAll('.size-options input[type="radio"]');
+            sizeOptions.forEach(radio => {
+                radio.addEventListener('change', () => {
+                    // Use custom toast instead of alert
+                    window.showToast(`Size selected: ${radio.value}`);
+                });
+            });
+
+            // Apply Filters button click
+            const applyFilterBtn = document.querySelector('.filter-apply-btn');
+            if (applyFilterBtn) {
+                applyFilterBtn.addEventListener('click', () => {
+                    // Use custom toast instead of alert
+                    window.showToast('Applying filters...', 'info'); // 'info' type for a different color
+                    // In a real application, you'd collect all filter values
+                    // and make an AJAX request to your backend to fetch filtered products.
+                });
+            }
+
+            // Add to Cart button functionality (use custom toast)
+            document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+                button.addEventListener('click', (event) => {
+                    event.preventDefault(); // Prevent default link behavior if applicable
+                    const productCard = button.closest('.product-card');
+                    const productName = productCard.querySelector('h3').textContent;
+                    // Use custom toast instead of alert
+                    window.showToast(`"${productName}" added to cart!`, 'success');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+    
+</body>
+</html>

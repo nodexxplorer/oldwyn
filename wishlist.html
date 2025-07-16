@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oldwyn - My Wishlist</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="assets/assets/logooldwyn.jpg" alt="Oldwyn Logo">
+                <span>OLDWYN</span>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <button class="icon-btn search-btn" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                    <i class="fas fa-microphone voice-search-icon"></i>
+                </button>
+                <a href="cart.html" class="icon-btn cart-btn" aria-label="Shopping Cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="wishlist.html" class="icon-btn wishlist-btn active" aria-label="My Wishlist">
+                    <i class="fas fa-heart"></i>
+                    <span class="wishlist-count">0</span>
+                </a>
+                <a href="login.html" class="icon-btn login-btn" aria-label="Login">
+                    <i class="fas fa-user-circle"></i>
+                </a>
+                <button class="hamburger-menu" aria-label="Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-nav-overlay">
+            <div class="mobile-nav-drawer glassmorphism">
+                <button class="close-mobile-nav-btn" aria-label="Close Mobile Menu">
+                    <i class="fas fa-times"></i>
+                </button>
+                <nav class="mobile-nav">
+                    <ul>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="wishlist.html"><i class="fas fa-heart"></i> My Wishlist</a></li>
+                        <li><a href="login.html"><i class="fas fa-user-circle"></i> Login / Register</a></li>
+                    </ul>
+                </nav>
+                <div class="drawer-footer">
+                    <p>&copy; 2025 Oldwyn</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="wishlist-hero-section animate-scroll-reveal">
+            <div class="hero-content">
+                <h1 class="page-title animate-fade-in-up">My Wishlist</h1>
+                <p class="animate-fade-in-up delay-1">Your saved items, just a click away from your wardrobe.</p>
+            </div>
+        </section>
+
+        <section class="wishlist-content-section container animate-scroll-reveal">
+            <div id="wishlist-items-container" class="product-grid">
+                <p id="empty-wishlist-message" class="empty-message">Your wishlist is empty. Start adding some amazing outfits!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-section footer-brand">
+                <a href="index.html" class="logo">
+                    <img src="assets/assets/logooldwyn.jpg" alt="Oldwyn Logo">
+                    <span>OLDWYN</span>
+                </a>
+                <p>"Tradition Elevated."</p>
+            </div>
+            <div class="footer-section footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section footer-newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for exclusive offers and new arrivals.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+            <div class="footer-section footer-social">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="https://instagram.com/oldwyn1" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/share/1BxHimutCW/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Oldwyn. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="search-overlay">
+        <div class="search-overlay-content glassmorphism">
+            <button class="close-search-btn" aria-label="Close Search"><i class="fas fa-times"></i></button>
+            <input type="text" class="search-input" placeholder="Search for outfits, categories...">
+            <button class="search-overlay-submit-btn"><i class="fas fa-search"></i></button>
+            <button class="voice-search-overlay-btn" aria-label="Voice Search">
+                <i class="fas fa-microphone"></i>
+                <span>Speak your search...</span>
+            </button>
+        </div>
+    </div>
+
+    <div id="custom-toast" class="custom-toast">
+        <i class="fas fa-check-circle toast-icon"></i>
+        <span class="toast-message"></span>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Placeholder product data (replace with real data from your shop.html or API)
+        const allProducts = [
+            { id: 'prod001', name: 'Elegant Agbada Set', price: 45000, image: 'assets/images/product1.jpg' },
+            { id: 'prod002', name: 'Classic Dashiki', price: 28500, image: 'assets/images/product2.jpg' },
+            { id: 'prod003', name: 'Ankara Print Dress', price: 32000, image: 'assets/images/product3.jpg' },
+            { id: 'prod004', name: 'Men\'s Kaftan', price: 38000, image: 'assets/images/product4.jpg' },
+            { id: 'prod005', name: 'Adire Bubu Gown', price: 25000, image: 'assets/images/product5.jpg' },
+            { id: 'prod006', name: 'Kente Jumpsuit', price: 30000, image: 'assets/images/product6.jpg' },
+            { id: 'prod007', name: 'Yoruba Native Cap', price: 8000, image: 'assets/images/product7.jpg' },
+            { id: 'prod008', name: 'Igbo Isiagu Shirt', price: 22000, image: 'assets/images/product8.jpg' },
+        ];
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const wishlistContainer = document.getElementById('wishlist-items-container');
+            const emptyMessage = document.getElementById('empty-wishlist-message');
+            const wishlistCountSpan = document.querySelector('.wishlist-count');
+
+            // Function to get wishlist items from localStorage
+            function getWishlistItems() {
+                const wishlist = localStorage.getItem('oldwynWishlist');
+                return wishlist ? JSON.parse(wishlist) : [];
+            }
+
+            // Function to save wishlist items to localStorage
+            function saveWishlistItems(wishlist) {
+                localStorage.setItem('oldwynWishlist', JSON.stringify(wishlist));
+                updateWishlistCount();
+            }
+
+            // Function to update wishlist count in header
+            function updateWishlistCount() {
+                const wishlist = getWishlistItems();
+                wishlistCountSpan.textContent = wishlist.length;
+                if (wishlist.length > 0) {
+                    wishlistCountSpan.style.display = 'flex';
+                } else {
+                    wishlistCountSpan.style.display = 'none';
+                }
+            }
+
+            // Function to render wishlist items
+            function renderWishlist() {
+                const wishlist = getWishlistItems();
+                wishlistContainer.innerHTML = ''; // Clear existing items
+
+                if (wishlist.length === 0) {
+                    emptyMessage.style.display = 'block';
+                    wishlistContainer.appendChild(emptyMessage); // Re-append if removed
+                } else {
+                    emptyMessage.style.display = 'none';
+                    wishlist.forEach(item => {
+                        const product = allProducts.find(p => p.id === item.id);
+                        if (product) {
+                            const productCard = document.createElement('div');
+                            productCard.classList.add('product-card', 'glassmorphism');
+                            productCard.setAttribute('data-product-id', product.id);
+
+                            productCard.innerHTML = `
+                                <div class="product-image-container">
+                                    <img src="${product.image}" alt="${product.name}">
+                                    <button class="quick-view-btn" aria-label="Quick View"><i class="fas fa-eye"></i></button>
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-title">${product.name}</h3>
+                                    <p class="product-price">₦ ${product.price.toLocaleString()}</p>
+                                    <div class="product-actions">
+                                        <button class="btn btn-primary add-to-cart-btn" data-product-id="${product.id}">Add to Cart</button>
+                                        <button class="icon-btn remove-from-wishlist-btn" data-product-id="${product.id}" aria-label="Remove from Wishlist"><i class="fas fa-times"></i></button>
+                                    </div>
+                                </div>
+                            `;
+                            wishlistContainer.appendChild(productCard);
+                        }
+                    });
+
+                    // Add event listeners for remove buttons
+                    wishlistContainer.querySelectorAll('.remove-from-wishlist-btn').forEach(button => {
+                        button.addEventListener('click', (e) => {
+                            const productId = e.currentTarget.dataset.productId;
+                            removeFromWishlist(productId);
+                        });
+                    });
+
+                    // Add event listeners for add to cart buttons (simulated)
+                    wishlistContainer.querySelectorAll('.add-to-cart-btn').forEach(button => {
+                        button.addEventListener('click', (e) => {
+                            const productId = e.currentTarget.dataset.productId;
+                            const product = allProducts.find(p => p.id === productId);
+                            if (product) {
+                                window.showToast(`${product.name} added to cart!`, 'success');
+                                // In a real app, you'd add to the actual cart here
+                                console.log(`Added ${product.name} to cart.`);
+                                // Optionally remove from wishlist after adding to cart
+                                removeFromWishlist(productId);
+                            }
+                        });
+                    });
+                }
+            }
+
+            // Function to remove item from wishlist
+            function removeFromWishlist(productId) {
+                let wishlist = getWishlistItems();
+                wishlist = wishlist.filter(item => item.id !== productId);
+                saveWishlistItems(wishlist);
+                window.showToast('Item removed from wishlist.', 'info');
+                renderWishlist(); // Re-render the list
+            }
+
+            // Initial render when the page loads
+            renderWishlist();
+            updateWishlistCount(); // Ensure count is correct on page load
+        });
+    </script>
+</body>
+</html>

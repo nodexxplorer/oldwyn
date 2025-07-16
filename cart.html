@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oldwyn - Your Shopping Cart</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="assets/assets/logooldwyn.jpg" alt="Oldwyn Logo">
+                <span>OLDWYN</span>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <button class="icon-btn search-btn" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                    <i class="fas fa-microphone voice-search-icon"></i>
+                </button>
+                <a href="cart.html" class="icon-btn cart-btn" aria-label="Shopping Cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="wishlist.html" class="icon-btn wishlist-btn" aria-label="My Wishlist">
+                    <i class="fas fa-heart"></i>
+                    <span class="wishlist-count">0</span>
+                </a>
+                <a href="login.html" class="icon-btn login-btn" aria-label="Login">
+                    <i class="fas fa-user-circle"></i>
+                </a>
+                <button class="hamburger-menu" aria-label="Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-nav-overlay">
+            <div class="mobile-nav-drawer glassmorphism">
+                <button class="close-mobile-nav-btn" aria-label="Close Mobile Menu">
+                    <i class="fas fa-times"></i>
+                </button>
+                <nav class="mobile-nav">
+                    <ul>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="wishlist.html"><i class="fas fa-heart"></i> My Wishlist</a></li>
+                        <li><a href="login.html"><i class="fas fa-user-circle"></i> Login / Register</a></li>
+                    </ul>
+                </nav>
+                <div class="drawer-footer">
+                    <p>&copy; 2025 Oldwyn</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="cart-section container animate-scroll-reveal">
+            <h1 class="page-title animate-fade-in-up">Your Shopping Bag</h1>
+
+            <div class="cart-content">
+                <div class="cart-items-container glassmorphism animate-fade-in-up delay-1">
+                    <div class="cart-item" data-price="85000">
+                        <div class="item-image">
+                            <img src="assets/assets/pics29.jpg" alt="Classic Gold Senator">
+                        </div>
+                        <div class="item-details">
+                            <h3 class="item-name">Classic Gold Senator</h3>
+                            <p class="item-price">₦<span class="price-value">85,000</span></p>
+                            <div class="item-options">
+                                <span>Size: M</span>
+                                <span>Color: Gold</span>
+                            </div>
+                            <div class="item-quantity-controls">
+                                <button class="qty-btn" data-action="decrease">-</button>
+                                <input type="number" value="1" min="1" class="qty-input">
+                                <button class="qty-btn" data-action="increase">+</button>
+                            </div>
+                        </div>
+                        <button class="remove-item-btn" aria-label="Remove item"><i class="fas fa-trash-alt"></i></button>
+                    </div>
+
+                    <div class="cart-item" data-price="78000">
+                        <div class="item-image">
+                            <img src="assets/assets/pics13.jpg" alt="Emerald Green Design">
+                        </div>
+                        <div class="item-details">
+                            <h3 class="item-name">Emerald Green Design</h3>
+                            <p class="item-price">₦<span class="price-value">78,000</span></p>
+                            <div class="item-options">
+                                <span>Size: L</span>
+                                <span>Color: Green</span>
+                            </div>
+                            <div class="item-quantity-controls">
+                                <button class="qty-btn" data-action="decrease">-</button>
+                                <input type="number" value="1" min="1" class="qty-input">
+                                <button class="qty-btn" data-action="increase">+</button>
+                            </div>
+                        </div>
+                        <button class="remove-item-btn" aria-label="Remove item"><i class="fas fa-trash-alt"></i></button>
+                    </div>
+
+                    <div class="empty-cart-message">
+                        <i class="fas fa-shopping-bag empty-cart-icon"></i>
+                        <p>Your shopping bag is empty.</p>
+                        <a href="shop.html" class="btn btn-primary">Start Shopping</a>
+                    </div>
+
+                </div>
+
+                <div class="cart-summary glassmorphism animate-fade-in-up delay-2">
+                    <h2>Order Summary</h2>
+                    <div class="summary-line">
+                        <span>Subtotal:</span>
+                        <span id="cart-subtotal">₦0.00</span>
+                    </div>
+                    <div class="summary-line">
+                        <span>Shipping:</span>
+                        <span>₦<span id="cart-shipping">0.00</span></span>
+                    </div>
+                    <div class="summary-line total">
+                        <span>Total:</span>
+                        <span id="cart-total">₦0.00</span>
+                    </div>
+                    <button class="btn btn-primary proceed-to-checkout-btn">Proceed to Checkout</button>
+                    <a href="shop.html" class="btn btn-secondary continue-shopping-btn">Continue Shopping</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-section footer-brand">
+                <a href="index.html" class="logo">
+                    <img src="assets/assets/logooldwyn.jpg" alt="Oldwyn Logo">
+                    <span>OLDWYN</span>
+                </a>
+                <p>"Tradition Elevated."</p>
+            </div>
+            <div class="footer-section footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section footer-newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for exclusive offers and new arrivals.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+            <div class="footer-section footer-social">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="https://instagram.com/oldwyn1" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/share/1BxHimutCW/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Oldwyn. All rights reserved.</p>
+        </div>
+    </footer>
+    <div class="search-overlay">
+        <div class="search-overlay-content glassmorphism">
+            <button class="close-search-btn" aria-label="Close Search"><i class="fas fa-times"></i></button>
+            <input type="text" class="search-input" placeholder="Search for outfits, categories...">
+            <button class="search-overlay-submit-btn"><i class="fas fa-search"></i></button>
+            <button class="voice-search-overlay-btn" aria-label="Voice Search">
+                <i class="fas fa-microphone"></i>
+                <span>Speak your search...</span>
+            </button>
+        </div>
+    </div>
+
+    <div id="custom-toast" class="custom-toast">
+        <i class="fas fa-check-circle toast-icon"></i>
+        <span class="toast-message"></span>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cartItemsContainer = document.querySelector('.cart-items-container');
+            const cartSubtotalEl = document.getElementById('cart-subtotal');
+            const cartShippingEl = document.getElementById('cart-shipping');
+            const cartTotalEl = document.getElementById('cart-total');
+            const emptyCartMessage = document.querySelector('.empty-cart-message');
+            const proceedToCheckoutBtn = document.querySelector('.proceed-to-checkout-btn');
+
+            // Hardcoded shipping for demonstration
+            const SHIPPING_COST_PER_ITEM = 5000; // ₦5,000 per item for simplicity
+
+            function formatCurrency(amount) {
+                return new Intl.NumberFormat('en-NG', { style: 'currency', currency: 'NGN', minimumFractionDigits: 0 }).format(amount);
+            }
+
+            function updateCartTotals() {
+                let subtotal = 0;
+                let itemCount = 0;
+                document.querySelectorAll('.cart-item').forEach(item => {
+                    const pricePerUnit = parseInt(item.dataset.price);
+                    const quantity = parseInt(item.querySelector('.qty-input').value);
+                    subtotal += pricePerUnit * quantity;
+                    itemCount += quantity;
+                });
+
+                const shipping = itemCount > 0 ? (SHIPPING_COST_PER_ITEM * itemCount) : 0; // Only charge shipping if items exist
+                const total = subtotal + shipping;
+
+                cartSubtotalEl.textContent = formatCurrency(subtotal);
+                cartShippingEl.textContent = formatCurrency(shipping);
+                cartTotalEl.textContent = formatCurrency(total);
+
+                // Toggle empty cart message and checkout button
+                if (itemCount === 0) {
+                    emptyCartMessage.style.display = 'flex';
+                    proceedToCheckoutBtn.disabled = true;
+                    proceedToCheckoutBtn.style.opacity = '0.7';
+                    proceedToCheckoutBtn.style.cursor = 'not-allowed';
+                } else {
+                    emptyCartMessage.style.display = 'none';
+                    proceedToCheckoutBtn.disabled = false;
+                    proceedToCheckoutBtn.style.opacity = '1';
+                    proceedToCheckoutBtn.style.cursor = 'pointer';
+                }
+
+                // Update cart count in header (basic for now)
+                const cartCountSpan = document.querySelector('.cart-count');
+                if (cartCountSpan) {
+                    cartCountSpan.textContent = itemCount;
+                }
+            }
+
+            // Quantity controls
+            cartItemsContainer.addEventListener('click', (event) => {
+                const target = event.target;
+                if (target.classList.contains('qty-btn')) {
+                    const qtyInput = target.closest('.cart-item').querySelector('.qty-input');
+                    let currentValue = parseInt(qtyInput.value);
+
+                    if (target.dataset.action === 'increase') {
+                        qtyInput.value = currentValue + 1;
+                    } else if (target.dataset.action === 'decrease') {
+                        if (currentValue > 1) {
+                            qtyInput.value = currentValue - 1;
+                        }
+                    }
+                    updateCartTotals();
+                }
+            });
+
+            // Remove item
+            cartItemsContainer.addEventListener('click', (event) => {
+                const target = event.target;
+                if (target.classList.contains('remove-item-btn') || target.closest('.remove-item-btn')) {
+                    const itemToRemove = target.closest('.cart-item');
+                    const itemName = itemToRemove.querySelector('.item-name').textContent;
+
+                    if (confirm(`Are you sure you want to remove "${itemName}" from your cart?`)) {
+                        itemToRemove.remove();
+                        updateCartTotals();
+                        if (window.showToast) {
+                            window.showToast(`"${itemName}" removed from cart.`, 'info');
+                        }
+                    }
+                }
+            });
+
+            // Initial calculation on page load
+            updateCartTotals();
+
+            // Proceed to Checkout button action
+            proceedToCheckoutBtn.addEventListener('click', () => {
+                if (!proceedToCheckoutBtn.disabled) {
+                    if (window.showToast) {
+                        window.showToast('Proceeding to Checkout!', 'success');
+                    }
+                    // Navigate to the checkout page
+                    window.location.href = 'checkout.html'; // <--- CHANGE THIS LINE
+                }
+            });
+        });
+    </script>
+</body>
+</html>

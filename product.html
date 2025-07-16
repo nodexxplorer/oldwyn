@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oldwyn - Classic Gold Senator - Product Details</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="assets/assets/logooldwyn.jpg" alt="Oldwyn Logo">
+                <span>OLDWYN</span>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <button class="icon-btn search-btn" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                    <i class="fas fa-microphone voice-search-icon"></i>
+                </button>
+                <a href="cart.html" class="icon-btn cart-btn" aria-label="Shopping Cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="wishlist.html" class="icon-btn wishlist-btn" aria-label="My Wishlist">
+                    <i class="fas fa-heart"></i>
+                    <span class="wishlist-count">0</span>
+                </a>
+                <a href="login.html" class="icon-btn login-btn" aria-label="Login">
+                    <i class="fas fa-user-circle"></i>
+                </a>
+                <button class="hamburger-menu" aria-label="Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-nav-overlay">
+            <div class="mobile-nav-drawer glassmorphism">
+                <button class="close-mobile-nav-btn" aria-label="Close Mobile Menu">
+                    <i class="fas fa-times"></i>
+                </button>
+                <nav class="mobile-nav">
+                    <ul>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="wishlist.html"><i class="fas fa-heart"></i> My Wishlist</a></li>
+                        <li><a href="login.html"><i class="fas fa-user-circle"></i> Login / Register</a></li>
+                    </ul>
+                </nav>
+                <div class="drawer-footer">
+                    <p>&copy; 2025 Oldwyn</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="product-detail-section container animate-scroll-reveal">
+            <div class="product-breadcrumb">
+                <a href="index.html">Home</a> / <a href="shop.html">Shop</a> / Classic Gold Senator
+            </div>
+
+            <div class="product-main-content">
+                <div class="product-image-gallery animate-fade-in-up">
+                    <img src="assets/assets/pics29.jpg" alt="Classic Gold Senator Main Image" id="mainProductImage">
+                    <div class="thumbnail-gallery">
+                        <img src="assets/assets/pics3.jpg" alt="Classic Gold Senator Thumbnail 1" class="thumbnail selected">
+                        <img src="assets/assets/pics8.jpg" alt="Classic Gold Senator Thumbnail 2" class="thumbnail">
+                        <img src="assets/assets/pics24.jpg" alt="Classic Gold Senator Thumbnail 3" class="thumbnail">
+                        <img src="assets/assets/pics12.jpg" alt="Classic Gold Senator Thumbnail 4" class="thumbnail">
+                    </div>
+                </div>
+
+                <div class="product-info-panel animate-fade-in-up delay-1 glassmorphism">
+                    <h1 class="product-title">Classic Gold Senator</h1>
+                    <p class="product-price">₦85,000</p>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> (4.5 / 5)
+                    </div>
+                    <p class="product-description">
+                        Embrace timeless elegance with our Classic Gold Senator. Crafted from premium, breathable fabric, this outfit offers unparalleled comfort and a distinguished silhouette. Perfect for traditional ceremonies, formal events, or a sophisticated everyday look.
+                    </p>
+                    <p class="product-sku">SKU: OWS-CG-001</p>
+
+                    <div class="product-options">
+                        <div class="option-group">
+                            <h3>Size:</h3>
+                            <div class="size-options">
+                                <label><input type="radio" name="size" value="S"><span>S</span></label>
+                                <label><input type="radio" name="size" value="M" checked><span>M</span></label>
+                                <label><input type="radio" name="size" value="L"><span>L</span></label>
+                                <label><input type="radio" name="size" value="XL"><span>XL</span></label>
+                                <label><input type="radio" name="size" value="XXL"><span>XXL</span></label>
+                            </div>
+                        </div>
+
+                        <div class="option-group">
+                            <h3>Color:</h3>
+                            <div class="color-options">
+                                <span class="color-box selected" style="background-color: #D4AF37;" data-color="gold" title="Gold"></span>
+                                <span class="color-box" style="background-color: #004d40;" data-color="dark-teal" title="Dark Teal"></span>
+                                <span class="color-box" style="background-color: #A0522D;" data-color="sienna" title="Sienna"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-action-panel">
+                        <div class="quantity-selector">
+                            <button class="qty-btn" data-action="decrease">-</button>
+                            <input type="number" value="1" min="1" class="qty-input">
+                            <button class="qty-btn" data-action="increase">+</button>
+                        </div>
+                        <button class="btn btn-primary add-to-cart-btn"><i class="fas fa-shopping-bag"></i> Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-tabs glassmorphism animate-scroll-reveal slide-in-up delay-2">
+                <div class="tab-header">
+                    <button class="tab-button active" data-tab="description">Description</button>
+                    <button class="tab-button" data-tab="sizing">Sizing & Fit</button>
+                    <button class="tab-button" data-tab="care">Care Instructions</button>
+                    <button class="tab-button" data-tab="reviews">Reviews (32)</button>
+                </div>
+                <div class="tab-content">
+                    <div id="description" class="tab-pane active">
+                        <p>The Classic Gold Senator is a masterpiece of traditional Nigerian menswear, re-imagined for the contemporary gentleman. It features exquisite embroidery along the neckline and cuffs, reflecting the rich cultural heritage of West Africa. The fabric is a luxurious blend, ensuring durability while providing a smooth, comfortable feel against the skin. This piece is ideal for making a grand entrance at any significant occasion, embodying sophistication and cultural pride.</p>
+                        <ul>
+                            <li><strong>Fabric:</strong> Premium Cotton-Silk Blend</li>
+                            <li><strong>Embellishment:</strong> Hand-stitched Gold Thread Embroidery</li>
+                            <li><strong>Fit:</strong> Tailored Regular Fit</li>
+                            <li><strong>Occasion:</strong> Weddings, Festivals, Formal Gatherings</li>
+                            <li><strong>Origin:</strong> Handcrafted in Nigeria</li>
+                        </ul>
+                    </div>
+                    <div id="sizing" class="tab-pane">
+                        <h3>Find Your Perfect Fit</h3>
+                        <p>Our Senator outfits are designed for a comfortable, tailored fit. Please refer to our sizing chart below to ensure the best fit.</p>
+                        <table class="sizing-table">
+                            <thead>
+                                <tr>
+                                    <th>Size</th>
+                                    <th>Chest (in)</th>
+                                    <th>Length (in)</th>
+                                    <th>Sleeve (in)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>S</td><td>36-38</td><td>40</td><td>25</td></tr>
+                                <tr><td>M</td><td>39-41</td><td>42</td><td>26</td></tr>
+                                <tr><td>L</td><td>42-44</td><td>44</td><td>27</td></tr>
+                                <tr><td>XL</td><td>45-47</td><td>46</td><td>28</td></tr>
+                                <tr><td>XXL</td><td>48-50</td><td>48</td><td>29</td></tr>
+                            </tbody>
+                        </table>
+                        <p class="sizing-note"><em>Note: All measurements are approximate. We recommend ordering your usual size or sizing up if between sizes for a relaxed fit.</em></p>
+                    </div>
+                    <div id="care" class="tab-pane">
+                        <h3>Care Instructions to Preserve Quality</h3>
+                        <ul>
+                            <li>Dry clean recommended for best results.</li>
+                            <li>Alternatively, hand wash cold with mild detergent.</li>
+                            <li>Do not bleach.</li>
+                            <li>Hang to dry in shade.</li>
+                            <li>Iron on low heat, inside out, avoiding embroidery.</li>
+                        </ul>
+                        <p>Proper care will ensure your Oldwyn Senator maintains its vibrant color and luxurious texture for years to come.</p>
+                    </div>
+                    <div id="reviews" class="tab-pane">
+                        <h3>Customer Reviews</h3>
+                        <div class="review-item">
+                            <div class="review-header">
+                                <span class="review-author">Adeola F.</span>
+                                <span class="review-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                                <span class="review-date">January 15, 2025</span>
+                            </div>
+                            <p class="review-text">"Absolutely stunning! The quality is superb, and the fit is perfect. Received so many compliments."</p>
+                        </div>
+                        <div class="review-item">
+                            <div class="review-header">
+                                <span class="review-author">Emeka O.</span>
+                                <span class="review-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+                                <span class="review-date">February 28, 2025</span>
+                            </div>
+                            <p class="review-text">"Comfortable and stylish. The gold embroidery really pops. Highly recommend Oldwyn."</p>
+                        </div>
+                        <button class="btn btn-secondary write-review-btn">Write a Review</button>
+                    </div>
+                </div>
+            </div>
+
+            <section class="related-products-section container">
+                <h2 class="section-title animate-scroll-reveal">You Might Also Like</h2>
+                <div class="product-grid">
+                    <div class="product-card animate-scroll-reveal slide-in-up" data-delay="0.1">
+                        <a href="product.html">
+                            <img src="assets/assets/pics45.jpg" alt="Regal Blue Senator">
+                            <div class="product-info">
+                                <h3>Regal Blue Senator</h3>
+                                <p class="product-price">₦92,500</p>
+                            </div>
+                        </a>
+                        <button class="add-to-cart-btn btn btn-secondary"><i class="fas fa-plus"></i> Add to Cart</button>
+                    </div>
+                    <div class="product-card animate-scroll-reveal slide-in-up" data-delay="0.2">
+                        <a href="product.html">
+                            <img src="assets/assets/pics13.jpg" alt="Emerald Green Design">
+                            <div class="product-info">
+                                <h3>Emerald Green Design</h3>
+                                <p class="product-price">₦78,000</p>
+                            </div>
+                        </a>
+                        <button class="add-to-cart-btn btn btn-secondary"><i class="fas fa-plus"></i> Add to Cart</button>
+                    </div>
+                    <div class="product-card animate-scroll-reveal slide-in-up" data-delay="0.3">
+                        <a href="product.html">
+                            <img src="assets/assets/pics31.jpg" alt="Traditional Red Motif">
+                            <div class="product-info">
+                                <h3>Traditional Red Motif</h3>
+                                <p class="product-price">₦81,000</p>
+                            </div>
+                        </a>
+                        <button class="add-to-cart-btn btn btn-secondary"><i class="fas fa-plus"></i> Add to Cart</button>
+                    </div>
+                </div>
+            </section>
+
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-section footer-brand">
+                <a href="index.html" class="logo">
+                    <img src="assets/assets/logooldwyn.jpg" alt="Oldwyn Logo">
+                    <span>OLDWYN</span>
+                </a>
+                <p>"Tradition Elevated."</p>
+            </div>
+            <div class="footer-section footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section footer-newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for exclusive offers and new arrivals.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+            <div class="footer-section footer-social">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="https://instagram.com/oldwyn1" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/share/1BxHimutCW/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Oldwyn. All rights reserved.</p>
+        </div>
+    </footer>
+    <div class="search-overlay">
+        <div class="search-overlay-content glassmorphism">
+            <button class="close-search-btn" aria-label="Close Search"><i class="fas fa-times"></i></button>
+            <input type="text" class="search-input" placeholder="Search for outfits, categories...">
+            <button class="search-overlay-submit-btn"><i class="fas fa-search"></i></button>
+            <button class="voice-search-overlay-btn" aria-label="Voice Search">
+                <i class="fas fa-microphone"></i>
+                <span>Speak your search...</span>
+            </button>
+        </div>
+    </div>
+
+    <div id="custom-toast" class="custom-toast">
+        <i class="fas fa-check-circle toast-icon"></i>
+        <span class="toast-message"></span>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Product Image Gallery
+            const mainProductImage = document.getElementById('mainProductImage');
+            const thumbnails = document.querySelectorAll('.thumbnail-gallery .thumbnail');
+
+            thumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener('click', () => {
+                    // Remove 'selected' from all thumbnails
+                    thumbnails.forEach(t => t.classList.remove('selected'));
+                    // Add 'selected' to the clicked thumbnail
+                    thumbnail.classList.add('selected');
+                    // Change the main image source
+                    mainProductImage.src = thumbnail.src;
+                });
+            });
+
+            // Quantity Selector
+            const qtyInput = document.querySelector('.qty-input');
+            const qtyIncreaseBtn = document.querySelector('.qty-btn[data-action="increase"]');
+            const qtyDecreaseBtn = document.querySelector('.qty-btn[data-action="decrease"]');
+
+            if (qtyIncreaseBtn && qtyDecreaseBtn && qtyInput) {
+                qtyIncreaseBtn.addEventListener('click', () => {
+                    let currentValue = parseInt(qtyInput.value);
+                    qtyInput.value = currentValue + 1;
+                });
+
+                qtyDecreaseBtn.addEventListener('click', () => {
+                    let currentValue = parseInt(qtyInput.value);
+                    if (currentValue > 1) { // Prevent quantity from going below 1
+                        qtyInput.value = currentValue - 1;
+                    }
+                });
+            }
+
+            // Product Options Selection (Size, Color)
+            const sizeOptions = document.querySelectorAll('.product-options .size-options input[type="radio"]');
+            sizeOptions.forEach(radio => {
+                radio.addEventListener('change', () => {
+                    // Use the custom toast function from main.js
+                    if (window.showToast) {
+                        window.showToast(`Size selected: ${radio.value}`);
+                    }
+                });
+            });
+
+            const colorOptions = document.querySelectorAll('.product-options .color-options .color-box');
+            colorOptions.forEach(colorBox => {
+                colorBox.addEventListener('click', () => {
+                    colorOptions.forEach(box => box.classList.remove('selected'));
+                    colorBox.classList.add('selected');
+                    // Use the custom toast function from main.js
+                    if (window.showToast) {
+                        window.showToast(`Color selected: ${colorBox.dataset.color.charAt(0).toUpperCase() + colorBox.dataset.color.slice(1)}`);
+                    }
+                });
+            });
+
+            // Add to Cart Button (Product Detail Page)
+            const addToCartBtn = document.querySelector('.product-action-panel .add-to-cart-btn');
+            if (addToCartBtn) {
+                addToCartBtn.addEventListener('click', () => {
+                    const productName = document.querySelector('.product-title').textContent;
+                    const quantity = qtyInput ? qtyInput.value : 1; // Get quantity, default to 1 if selector is missing
+                    // Use the custom toast function from main.js
+                    if (window.showToast) {
+                        window.showToast(`${quantity} x "${productName}" added to cart!`, 'success');
+                    }
+                });
+            }
+
+            // Product Tabs Functionality
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Deactivate all buttons and panes
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabPanes.forEach(pane => pane.classList.remove('active'));
+
+                    // Activate the clicked button and its corresponding pane
+                    button.classList.add('active');
+                    document.getElementById(button.dataset.tab).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

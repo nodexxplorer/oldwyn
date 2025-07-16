@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oldwyn - Contact Us</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="assets/assets/logooldwyn.jpg" alt="Oldwyn Logo">
+                <span>OLDWYN</span>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li> </ul>
+            </nav>
+            <div class="header-icons">
+                <button class="icon-btn search-btn" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                    <i class="fas fa-microphone voice-search-icon"></i>
+                </button>
+                <a href="cart.html" class="icon-btn cart-btn" aria-label="Shopping Cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="wishlist.html" class="icon-btn wishlist-btn" aria-label="My Wishlist">
+                    <i class="fas fa-heart"></i>
+                    <span class="wishlist-count">0</span>
+                </a>
+                <a href="login.html" class="icon-btn login-btn" aria-label="Login">
+                    <i class="fas fa-user-circle"></i>
+                </a>
+                <button class="hamburger-menu" aria-label="Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-nav-overlay">
+            <div class="mobile-nav-drawer glassmorphism">
+                <button class="close-mobile-nav-btn" aria-label="Close Mobile Menu">
+                    <i class="fas fa-times"></i>
+                </button>
+                <nav class="mobile-nav">
+                    <ul>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="wishlist.html"><i class="fas fa-heart"></i> My Wishlist</a></li>
+                        <li><a href="login.html"><i class="fas fa-user-circle"></i> Login / Register</a></li>
+                    </ul>
+                </nav>
+                <div class="drawer-footer">
+                    <p>&copy; 2025 Oldwyn</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-hero-section animate-scroll-reveal">
+            <div class="hero-content">
+                <h1 class="page-title animate-fade-in-up">Get in Touch</h1>
+                <p class="animate-fade-in-up delay-1">We're here to help! Reach out to us for any inquiries.</p>
+            </div>
+        </section>
+
+        <section class="contact-content-section container animate-scroll-reveal">
+            <div class="contact-info-block glassmorphism animate-fade-in-up delay-1">
+                <h2>Contact Information</h2>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email:</span> <a href="mailto:support@oldwyn.com">support@oldwyn.com</a>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>Phone:</span> <a href="tel:+2348012345678">+234 (801) 234-5678</a>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Address:</span> Oldwyn HQ, 7 Heritage Lane, Victoria Island, Lagos, Nigeria.
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <span>Business Hours:</span> Mon - Fri: 9:00 AM - 5:00 PM (WAT)
+                </div>
+
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="https://instagram.com/oldwyn1" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/share/1BxHimutCW/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="contact-form-block glassmorphism animate-fade-in-up delay-2">
+                <h2>Send Us a Message</h2>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="contactName">Your Name:</label>
+                        <input type="text" id="contactName" name="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="contactEmail">Your Email:</label>
+                        <input type="email" id="contactEmail" name="email" required placeholder="john.doe@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="contactSubject">Subject:</label>
+                        <input type="text" id="contactSubject" name="subject" required placeholder="Inquiry about an order">
+                    </div>
+                    <div class="form-group">
+                        <label for="contactMessage">Your Message:</label>
+                        <textarea id="contactMessage" name="message" rows="6" required placeholder="Type your message here..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="map-section container animate-scroll-reveal delay-3">
+            <h2 class="animate-fade-in-up">Find Us on the Map</h2>
+            <div class="map-container glassmorphism animate-fade-in-up delay-1">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15842.846568910086!2d3.390885567540237!3d6.438525547432077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2ae68832a7%3A0xc3c54d24177b8f9e!2sVictoria%20Island%2C%20Lagos!5e0!3m2!1sen!2sng!4v1700000000000!5m2!1sen!2sng" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-section footer-brand">
+                <a href="index.html" class="logo">
+                    <img src="assets/assets/logooldwyn.jpg" alt="Oldwyn Logo">
+                    <span>OLDWYN</span>
+                </a>
+                <p>"Tradition Elevated."</p>
+            </div>
+            <div class="footer-section footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section footer-newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for exclusive offers and new arrivals.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+            <div class="footer-section footer-social">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="https://instagram.com/oldwyn1" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/share/1BxHimutCW/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Oldwyn. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="search-overlay">
+        <div class="search-overlay-content glassmorphism">
+            <button class="close-search-btn" aria-label="Close Search"><i class="fas fa-times"></i></button>
+            <input type="text" class="search-input" placeholder="Search for outfits, categories...">
+            <button class="search-overlay-submit-btn"><i class="fas fa-search"></i></button>
+            <button class="voice-search-overlay-btn" aria-label="Voice Search">
+                <i class="fas fa-microphone"></i>
+                <span>Speak your search...</span>
+            </button>
+        </div>
+    </div>
+
+    <div id="custom-toast" class="custom-toast">
+        <i class="fas fa-check-circle toast-icon"></i>
+        <span class="toast-message"></span>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const contactForm = document.getElementById('contact-form');
+
+            if (contactForm) {
+                contactForm.addEventListener('submit', (event) => {
+                    event.preventDefault(); // Prevent default form submission
+
+                    const name = document.getElementById('contactName').value.trim();
+                    const email = document.getElementById('contactEmail').value.trim();
+                    const subject = document.getElementById('contactSubject').value.trim();
+                    const message = document.getElementById('contactMessage').value.trim();
+
+                    if (!name || !email || !subject || !message) {
+                        window.showToast('Please fill in all required fields.', 'error');
+                        return;
+                    }
+
+                    if (!/\S+@\S+\.\S+/.test(email)) {
+                        window.showToast('Please enter a valid email address.', 'error');
+                        return;
+                    }
+
+                    // In a real application, you would send this data to a backend server
+                    // using fetch() or XMLHttpRequest.
+                    console.log('Contact Form Submitted:', { name, email, subject, message });
+
+                    window.showToast('Your message has been sent!', 'success');
+
+                    // Clear the form
+                    contactForm.reset();
+                });
+            }
+        });
+    </script>
+</body>
+</html>

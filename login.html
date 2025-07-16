@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oldwyn - Login / Register</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Specific styles for the login page */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: var(--color-black); /* Fallback */
+            background-image: url('assets/images/login-bg.jpg'); /* Optional: A subtle pattern or dark image */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            padding: 20px; /* Add padding for small screens */
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+            z-index: 0;
+        }
+
+        .login-container {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 450px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .login-container .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 30px;
+            font-size: 2.5em;
+            color: var(--color-gold);
+            text-decoration: none;
+        }
+
+        .login-container .logo img {
+            height: 60px;
+            /* margin-top: 30px; */
+        }
+        
+        
+        .login-container h2 {
+            font-size: 2.2em;
+            margin-bottom: 30px;
+            color: var(--color-gold);
+        }
+
+        .input-group {
+            position: relative;
+            margin-bottom: 25px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 15px 15px 15px 45px; /* Adjust padding for icon */
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--border-radius-md);
+            color: var(--color-white);
+            font-size: 1em;
+            outline: none;
+            transition: border-color 0.3s ease, background-color 0.3s ease;
+        }
+
+        .input-group input:focus {
+            border-color: var(--color-gold);
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .input-group input::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .input-group .icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.2em;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.2em;
+            margin-top: 20px;
+            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.5);
+        }
+
+        .social-login {
+            margin-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+        }
+
+        .social-login p {
+            margin-bottom: 20px;
+            font-size: 0.95em;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 12px;
+            border-radius: var(--border-radius-md);
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .social-btn i {
+            font-size: 1.3em;
+        }
+
+        .google-btn {
+            background-color: #DB4437; /* Google red */
+            color: var(--color-white);
+            border: none;
+        }
+        .google-btn:hover {
+            background-color: #c0392b;
+            transform: translateY(-2px);
+        }
+
+        /* You can add a subtle button for phone login if you want to show it as an option */
+        .phone-btn {
+            background-color: #25D366; /* WhatsApp Green for consistency, or adjust */
+            color: var(--color-white);
+            border: none;
+        }
+        .phone-btn:hover {
+            background-color: #1DA851;
+            transform: translateY(-2px);
+        }
+
+        .forgot-password, .register-link {
+            display: block;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .forgot-password:hover, .register-link:hover {
+            color: var(--color-gold);
+        }
+
+        /* Toggle between login/register (optional, requires JS) */
+        .form-toggle {
+            margin-top: 30px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9em;
+        }
+        .form-toggle a {
+            color: var(--color-gold);
+            font-weight: 600;
+            margin-left: 5px;
+        }
+        .form-toggle a:hover {
+            text-decoration: underline;
+        }
+
+        /* Registration form specific styles (initially hidden) */
+        .register-form {
+            display: none; /* Hidden by default */
+        }
+        .register-form .input-group input {
+            padding: 15px 15px 15px 45px;
+        }
+
+        /* Show active form */
+        .login-form.active,
+        .register-form.active {
+            display: block;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 576px) {
+            .login-container {
+                padding: 25px;
+                margin: 0 15px; /* Ensure some margin on very small screens */
+            }
+            .login-container h2 {
+                font-size: 1.8em;
+            }
+            .input-group input {
+                padding: 12px 12px 12px 40px;
+            }
+            .input-group .icon {
+                left: 10px;
+                font-size: 1em;
+            }
+            .social-btn {
+                padding: 10px;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container glassmorphism animate-fade-in-up">
+        <a href="index.html" class="logo">
+            <img src="assets/assets/logooldwyn.jpg" alt="Oldwyn Logo">
+            <span>OLDWYN</span>
+        </a>
+        <h2 id="form-title">Login to Your Account</h2>
+
+        <form class="login-form active" id="loginForm">
+            <div class="input-group">
+                <i class="fas fa-envelope icon"></i>
+                <input type="email" id="loginEmail" placeholder="Email Address" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-lock icon"></i>
+                <input type="password" id="loginPassword" placeholder="Password" required>
+            </div>
+            <button type="submit" class="btn btn-primary login-btn">Login</button>
+            <a href="#" class="forgot-password">Forgot Password?</a>
+
+            <div class="social-login">
+                <p>Or login with</p>
+                <button type="button" class="social-btn google-btn">
+                    <i class="fab fa-google"></i> Continue with Google
+                </button>
+                </div>
+        </form>
+
+        <form class="register-form" id="registerForm">
+            <div class="input-group">
+                <i class="fas fa-user icon"></i>
+                <input type="text" id="registerName" placeholder="Full Name" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-envelope icon"></i>
+                <input type="email" id="registerEmail" placeholder="Email Address" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-lock icon"></i>
+                <input type="password" id="registerPassword" placeholder="Password" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-lock icon"></i>
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+            </div>
+            <button type="submit" class="btn btn-primary login-btn">Register</button>
+            <div class="social-login">
+                <p>Or register with</p>
+                <button type="button" class="social-btn google-btn">
+                    <i class="fab fa-google"></i> Register with Google
+                </button>
+            </div>
+        </form>
+
+        <div class="form-toggle">
+            Don't have an account? <a href="#" id="showRegister">Register here</a>
+        </div>
+        <div class="form-toggle">
+            Already have an account? <a href="#" id="showLogin">Login here</a>
+        </div>
+    </div>
+    <div id="custom-toast" class="custom-toast">
+        <i class="fas fa-check-circle toast-icon"></i>
+        <span class="toast-message"></span>
+    </div>
+    <div class="search-overlay">
+        <div class="search-overlay-content glassmorphism">
+            <button class="close-search-btn" aria-label="Close Search"><i class="fas fa-times"></i></button>
+            <input type="text" class="search-input" placeholder="Search for outfits, categories...">
+            <button class="search-overlay-submit-btn"><i class="fas fa-search"></i></button>
+            <button class="voice-search-overlay-btn" aria-label="Voice Search">
+                <i class="fas fa-microphone"></i>
+                <span>Speak your search...</span>
+            </button>
+        </div>
+    </div>
+
+    <div id="custom-toast" class="custom-toast">
+        <i class="fas fa-check-circle toast-icon"></i>
+        <span class="toast-message"></span>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const loginForm = document.getElementById('loginForm');
+            const registerForm = document.getElementById('registerForm');
+            const showLoginBtn = document.getElementById('showLogin');
+            const showRegisterBtn = document.getElementById('showRegister');
+            const formTitle = document.getElementById('form-title');
+
+            // Function to show a form and hide others
+            const showForm = (formToShow, title) => {
+                loginForm.classList.remove('active');
+                registerForm.classList.remove('active');
+                formToShow.classList.add('active');
+                formTitle.textContent = title;
+
+                // Toggle visibility of toggle links
+                showLoginBtn.parentNode.style.display = (formToShow === loginForm) ? 'none' : 'block';
+                showRegisterBtn.parentNode.style.display = (formToShow === registerForm) ? 'none' : 'block';
+            };
+
+            // Initial state
+            showForm(loginForm, 'Login to Your Account');
+
+            // Event Listeners for toggling forms
+            showRegisterBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                showForm(registerForm, 'Create Your Account');
+            });
+
+            showLoginBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                showForm(loginForm, 'Login to Your Account');
+            });
+
+            // Handle form submissions (placeholders)
+            loginForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Login attempt with: ' + document.getElementById('loginEmail').value);
+                // In a real app, send data to backend for authentication
+            });
+
+            registerForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const password = document.getElementById('registerPassword').value;
+                const confirmPassword = document.getElementById('confirmPassword').value;
+                if (password !== confirmPassword) {
+                    alert('Passwords do not match!');
+                    return;
+                }
+                alert('Registration attempt with: ' + document.getElementById('registerEmail').value);
+                // In a real app, send data to backend for user registration
+            });
+
+            // Handle Google Login Button Click (conceptual)
+            document.querySelectorAll('.google-btn').forEach(button => {
+                button.addEventListener('click', () => {
+                    alert('Initiating Google Login. (Requires Google API integration)');
+                    // In a real app, you'd use Google Sign-In SDK here
+                    // e.g., gapi.auth2.getAuthInstance().signIn();
+                });
+            });
+
+            // Optional: Phone Login (conceptual)
+            // const phoneBtn = document.querySelector('.phone-btn');
+            // if (phoneBtn) {
+            //     phoneBtn.addEventListener('click', () => {
+            //         alert('Initiating Phone Number Login. (Requires backend OTP verification)');
+            //     });
+            // }
+        });
+    </script>
+
+
+    >
+</body>
+</html>

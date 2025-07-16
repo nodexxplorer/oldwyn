@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oldwyn - My Profile</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="assets/assets/logooldwyn.jpg" alt="Oldwyn Logo">
+                <span>OLDWYN</span>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <button class="icon-btn search-btn" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                    <i class="fas fa-microphone voice-search-icon"></i>
+                </button>
+                <a href="cart.html" class="icon-btn cart-btn" aria-label="Shopping Cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="wishlist.html" class="icon-btn wishlist-btn" aria-label="My Wishlist">
+                    <i class="fas fa-heart"></i>
+                    <span class="wishlist-count">0</span>
+                </a>
+                <a href="profile.html" class="icon-btn login-btn active" aria-label="My Profile">
+                    <i class="fas fa-user-circle"></i>
+                </a>
+                <button class="hamburger-menu" aria-label="Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-nav-overlay">
+            <div class="mobile-nav-drawer glassmorphism">
+                <button class="close-mobile-nav-btn" aria-label="Close Mobile Menu">
+                    <i class="fas fa-times"></i>
+                </button>
+                <nav class="mobile-nav">
+                    <ul>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="wishlist.html"><i class="fas fa-heart"></i> My Wishlist</a></li>
+                        <li><a href="profile.html"><i class="fas fa-user-circle"></i> My Profile</a></li> </ul>
+                </nav>
+                <div class="drawer-footer">
+                    <p>&copy; 2025 Oldwyn</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="profile-hero-section animate-scroll-reveal">
+            <div class="hero-content">
+                <h1 class="page-title animate-fade-in-up">My Profile</h1>
+                <p class="animate-fade-in-up delay-1">Welcome back, **[User Name]**!</p>
+            </div>
+        </section>
+
+        <section class="profile-content-section container animate-scroll-reveal">
+            <div class="profile-sidebar glassmorphism animate-fade-in-left delay-1">
+                <div class="profile-header">
+                    <i class="fas fa-user-circle profile-avatar"></i>
+                    <h3>[User Name]</h3>
+                    <p>[user@example.com]</p>
+                </div>
+                <nav class="profile-nav">
+                    <ul>
+                        <li><a href="#dashboard" class="profile-nav-link active" data-tab="dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                        <li><a href="#orders" class="profile-nav-link" data-tab="orders"><i class="fas fa-box"></i> My Orders</a></li>
+                        <li><a href="#account" class="profile-nav-link" data-tab="account"><i class="fas fa-user-edit"></i> Account Details</a></li>
+                        <li><a href="#addresses" class="profile-nav-link" data-tab="addresses"><i class="fas fa-map-marker-alt"></i> My Addresses</a></li>
+                        <li><a href="login.html" class="profile-nav-link logout-link"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="profile-main-content glassmorphism animate-fade-in-right delay-2">
+                <div id="dashboard" class="profile-tab-content active">
+                    <h2>Dashboard Overview</h2>
+                    <p>Welcome to your Oldwyn profile! Here you can find a quick summary of your activity.</p>
+                    <div class="dashboard-stats-grid">
+                        <div class="stat-item">
+                            <h3>Total Orders</h3>
+                            <p>5</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>Pending Orders</h3>
+                            <p>1</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>Wishlist Items</h3>
+                            <p>3</p>
+                        </div>
+                    </div>
+                    <h3>Recent Orders</h3>
+                    <div class="table-responsive">
+                        <table class="orders-table">
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Date</th>
+                                    <th>Total</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#OWY1001</td>
+                                    <td>2025-07-10</td>
+                                    <td>₦ 45,000</td>
+                                    <td class="status-shipped">Shipped</td>
+                                    <td><a href="#" class="view-details-btn">View</a></td>
+                                </tr>
+                                <tr>
+                                    <td>#OWY1002</td>
+                                    <td>2025-07-15</td>
+                                    <td>₦ 28,500</td>
+                                    <td class="status-pending">Pending</td>
+                                    <td><a href="#" class="view-details-btn">View</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="orders" class="profile-tab-content">
+                    <h2>My Orders</h2>
+                    <p>Here's a detailed list of all your past and current orders with Oldwyn.</p>
+                    <div class="table-responsive">
+                        <table class="orders-table full-width">
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Date</th>
+                                    <th>Items</th>
+                                    <th>Total</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#OWY1001</td>
+                                    <td>2025-07-10</td>
+                                    <td>Agbada Set, Cap</td>
+                                    <td>₦ 45,000</td>
+                                    <td class="status-shipped">Shipped</td>
+                                    <td><a href="#" class="view-details-btn">Details</a></td>
+                                </tr>
+                                <tr>
+                                    <td>#OWY1002</td>
+                                    <td>2025-07-15</td>
+                                    <td>Dashiki, Trousers</td>
+                                    <td>₦ 28,500</td>
+                                    <td class="status-pending">Pending</td>
+                                    <td><a href="#" class="view-details-btn">Details</a></td>
+                                </tr>
+                                <tr>
+                                    <td>#OWY999</td>
+                                    <td>2025-06-28</td>
+                                    <td>Ankara Dress</td>
+                                    <td>₦ 32,000</td>
+                                    <td class="status-delivered">Delivered</td>
+                                    <td><a href="#" class="view-details-btn">Details</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="account" class="profile-tab-content">
+                    <h2>Account Details</h2>
+                    <p>Manage your personal information.</p>
+                    <form id="account-details-form" class="profile-form">
+                        <div class="form-group">
+                            <label for="firstName">First Name:</label>
+                            <input type="text" id="firstName" value="John" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name:</label>
+                            <input type="text" id="lastName" value="Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address:</label>
+                            <input type="email" id="email" value="user@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number:</label>
+                            <input type="tel" id="phone" value="+2348012345678">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </form>
+                    <h3 class="mt-40">Change Password</h3>
+                    <form id="change-password-form" class="profile-form">
+                        <div class="form-group">
+                            <label for="currentPassword">Current Password:</label>
+                            <input type="password" id="currentPassword" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="newPassword">New Password:</label>
+                            <input type="password" id="newPassword" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmNewPassword">Confirm New Password:</label>
+                            <input type="password" id="confirmNewPassword" required>
+                        </div>
+                        <button type="submit" class="btn btn-secondary">Change Password</button>
+                    </form>
+                </div>
+
+                <div id="addresses" class="profile-tab-content">
+                    <h2>My Addresses</h2>
+                    <p>Manage your shipping and billing addresses.</p>
+                    <div class="address-list">
+                        <div class="address-card">
+                            <h3>Default Shipping Address</h3>
+                            <p>John Doe</p>
+                            <p>Apartment 4B, Victoria Gardens Estate,</p>
+                            <p>Lekki-Epe Expressway, Lagos, Nigeria</p>
+                            <p>Phone: +2348012345678</p>
+                            <div class="address-actions">
+                                <button class="btn btn-sm btn-outline-gold"><i class="fas fa-edit"></i> Edit</button>
+                                <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash-alt"></i> Delete</button>
+                            </div>
+                        </div>
+                        <div class="address-card">
+                            <h3>Secondary Address</h3>
+                            <p>John Doe</p>
+                            <p>Block 12, Plot 5, Banana Island,</p>
+                            <p>Ikoyi, Lagos, Nigeria</p>
+                            <p>Phone: +2348098765432</p>
+                            <div class="address-actions">
+                                <button class="btn btn-sm btn-outline-gold"><i class="fas fa-edit"></i> Edit</button>
+                                <button class="btn btn-sm btn-outline-danger"><i class="fas fa-trash-alt"></i> Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary mt-30"><i class="fas fa-plus"></i> Add New Address</button>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-section footer-brand">
+                <a href="index.html" class="logo">
+                    <img src="assets/assets/logooldwyn.jpg" alt="Oldwyn Logo">
+                    <span>OLDWYN</span>
+                </a>
+                <p>"Tradition Elevated."</p>
+            </div>
+            <div class="footer-section footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section footer-newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for exclusive offers and new arrivals.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+            <div class="footer-section footer-social">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="https://instagram.com/oldwyn1" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/share/1BxHimutCW" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Oldwyn. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="search-overlay">
+        <div class="search-overlay-content glassmorphism">
+            <button class="close-search-btn" aria-label="Close Search"><i class="fas fa-times"></i></button>
+            <input type="text" class="search-input" placeholder="Search for outfits, categories...">
+            <button class="search-overlay-submit-btn"><i class="fas fa-search"></i></button>
+            <button class="voice-search-overlay-btn" aria-label="Voice Search">
+                <i class="fas fa-microphone"></i>
+                <span>Speak your search...</span>
+            </button>
+        </div>
+    </div>
+
+    <div id="custom-toast" class="custom-toast">
+        <i class="fas fa-check-circle toast-icon"></i>
+        <span class="toast-message"></span>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.profile-nav-link');
+            const tabContents = document.querySelectorAll('.profile-tab-content');
+            const accountDetailsForm = document.getElementById('account-details-form');
+            const changePasswordForm = document.getElementById('change-password-form');
+
+            // Tab switching logic
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+
+                    // Remove active from all links and content
+                    navLinks.forEach(nav => nav.classList.remove('active'));
+                    tabContents.forEach(tab => tab.classList.remove('active'));
+
+                    // Add active to clicked link
+                    link.classList.add('active');
+
+                    // Show corresponding tab content
+                    const targetTabId = link.dataset.tab;
+                    document.getElementById(targetTabId).classList.add('active');
+                });
+            });
+
+            // Form submission simulation for Account Details
+            if (accountDetailsForm) {
+                accountDetailsForm.addEventListener('submit', (event) => {
+                    event.preventDefault(); // Prevent default form submission
+                    window.showToast('Account details updated successfully!', 'success');
+                    // In a real app, send data to backend here
+                    console.log('Account Details Saved:', {
+                        firstName: document.getElementById('firstName').value,
+                        lastName: document.getElementById('lastName').value,
+                        email: document.getElementById('email').value,
+                        phone: document.getElementById('phone').value
+                    });
+                });
+            }
+
+            // Form submission simulation for Change Password
+            if (changePasswordForm) {
+                changePasswordForm.addEventListener('submit', (event) => {
+                    event.preventDefault(); // Prevent default form submission
+                    const currentPass = document.getElementById('currentPassword').value;
+                    const newPass = document.getElementById('newPassword').value;
+                    const confirmNewPass = document.getElementById('confirmNewPassword').value;
+
+                    if (newPass !== confirmNewPass) {
+                        window.showToast('New passwords do not match!', 'error');
+                        return;
+                    }
+                    if (newPass.length < 6) { // Basic validation
+                         window.showToast('New password must be at least 6 characters long.', 'error');
+                         return;
+                    }
+
+                    // In a real app, send data to backend for password change
+                    console.log('Password Change Attempt:', { currentPass, newPass });
+                    window.showToast('Password changed successfully!', 'success');
+                    changePasswordForm.reset();
+                });
+            }
+        });
+    </script>
+</body>
+</html>

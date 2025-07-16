@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oldwyn - Checkout</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <a href="index.html" class="logo">
+                <img src="assets/assets/logooldwyn.jpg" alt="Oldwyn Logo">
+                <span>OLDWYN</span>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <button class="icon-btn search-btn" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                    <i class="fas fa-microphone voice-search-icon"></i>
+                </button>
+                <a href="cart.html" class="icon-btn cart-btn" aria-label="Shopping Cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="wishlist.html" class="icon-btn wishlist-btn" aria-label="My Wishlist">
+                    <i class="fas fa-heart"></i>
+                    <span class="wishlist-count">0</span>
+                </a>
+                <a href="login.html" class="icon-btn login-btn" aria-label="Login">
+                    <i class="fas fa-user-circle"></i>
+                </a>
+                <button class="hamburger-menu" aria-label="Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-nav-overlay">
+            <div class="mobile-nav-drawer glassmorphism">
+                <button class="close-mobile-nav-btn" aria-label="Close Mobile Menu">
+                    <i class="fas fa-times"></i>
+                </button>
+                <nav class="mobile-nav">
+                    <ul>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="wishlist.html"><i class="fas fa-heart"></i> My Wishlist</a></li>
+                        <li><a href="login.html"><i class="fas fa-user-circle"></i> Login / Register</a></li>
+                    </ul>
+                </nav>
+                <div class="drawer-footer">
+                    <p>&copy; 2025 Oldwyn</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="checkout-section container animate-scroll-reveal">
+            <h1 class="page-title animate-fade-in-up">Checkout</h1>
+
+            <div class="checkout-progress-bar animate-fade-in-up delay-1">
+                <div class="progress-step active" data-step="1">
+                    <span class="step-number">1</span>
+                    <span class="step-name">Shipping</span>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step" data-step="2">
+                    <span class="step-number">2</span>
+                    <span class="step-name">Payment</span>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step" data-step="3">
+                    <span class="step-number">3</span>
+                    <span class="step-name">Review</span>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step" data-step="4">
+                    <span class="step-number">4</span>
+                    <span class="step-name">Confirmation</span>
+                </div>
+            </div>
+
+            <div class="checkout-content glassmorphism animate-fade-in-up delay-2">
+                <div class="checkout-step active" id="step-shipping">
+                    <h2>Shipping Information</h2>
+                    <form id="shipping-form" class="checkout-form">
+                        <div class="form-group">
+                            <label for="fullName">Full Name:</label>
+                            <input type="text" id="fullName" name="fullName" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number:</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+234 801 234 5678" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Street Address:</label>
+                            <input type="text" id="address" name="address" placeholder="123 Oldwyn Street" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City:</label>
+                            <input type="text" id="city" name="city" placeholder="Lagos" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="state">State:</label>
+                            <input type="text" id="state" name="state" placeholder="Lagos State" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="zipCode">Zip/Postal Code (Optional):</label>
+                            <input type="text" id="zipCode" name="zipCode" placeholder="100001">
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary" data-action="next">Continue to Payment</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="checkout-step" id="step-payment">
+                    <h2>Payment Method</h2>
+                    <form id="payment-form" class="checkout-form">
+                        <div class="payment-options">
+                            <label class="payment-option">
+                                <input type="radio" name="paymentMethod" value="card" checked>
+                                <div class="option-content glassmorphism">
+                                    <i class="fas fa-credit-card"></i>
+                                    <span>Pay with Card</span>
+                                    <p>Visa, MasterCard, Verve</p>
+                                </div>
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="paymentMethod" value="bankTransfer">
+                                <div class="option-content glassmorphism">
+                                    <i class="fas fa-university"></i>
+                                    <span>Bank Transfer</span>
+                                    <p>Direct bank transfer</p>
+                                </div>
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="paymentMethod" value="ussd">
+                                <div class="option-content glassmorphism">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span>USSD</span>
+                                    <p>Pay using USSD code</p>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="btn btn-secondary" data-action="prev">Back to Shipping</button>
+                            <button type="submit" class="btn btn-primary" data-action="next">Continue to Review</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="checkout-step" id="step-review">
+                    <h2>Order Review</h2>
+                    <div class="order-summary-review">
+                        <h3>Items in Your Order:</h3>
+                        <div class="review-items-list">
+                            <div class="review-item-card">
+                                <img src="assets/assets/pics29.jpg" alt="Classic Gold Senator">
+                                <div class="item-details">
+                                    <h4>Classic Gold Senator</h4>
+                                    <p>Size: M, Color: Gold</p>
+                                    <p>Quantity: 1</p>
+                                    <p class="price">₦85,000</p>
+                                </div>
+                            </div>
+                            <div class="review-item-card">
+                                <img src="assets/assets/pics13.jpg" alt="Emerald Green Design">
+                                <div class="item-details">
+                                    <h4>Emerald Green Design</h4>
+                                    <p>Size: L, Color: Green</p>
+                                    <p>Quantity: 1</p>
+                                    <p class="price">₦78,000</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3>Summary:</h3>
+                        <div class="summary-line">
+                            <span>Subtotal:</span>
+                            <span id="review-subtotal">₦0.00</span>
+                        </div>
+                        <div class="summary-line">
+                            <span>Shipping:</span>
+                            <span id="review-shipping">₦0.00</span>
+                        </div>
+                        <div class="summary-line total">
+                            <span>Total:</span>
+                            <span id="review-total">₦0.00</span>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" data-action="prev">Back to Payment</button>
+                        <button type="button" class="btn btn-primary" data-action="next" id="place-order-btn">Place Order</button>
+                    </div>
+                </div>
+
+                <div class="checkout-step" id="step-confirmation">
+                    <div class="confirmation-message">
+                        <i class="fas fa-check-circle confirmation-icon"></i>
+                        <h2>Thank You For Your Order!</h2>
+                        <p>Your order #<span id="order-id">OW-2025-ABCD-1234</span> has been successfully placed.</p>
+                        <p>You will receive an email confirmation shortly with details about your purchase and estimated delivery.</p>
+                        <a href="shop.html" class="btn btn-primary">Continue Shopping</a>
+                        <a href="index.html" class="btn btn-secondary">Go to Homepage</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-section footer-brand">
+                <a href="index.html" class="logo">
+                    <img src="assets/assets/logooldwyn.jpg" alt="Oldwyn Logo">
+                    <span>OLDWYN</span>
+                </a>
+                <p>"Tradition Elevated."</p>
+            </div>
+            <div class="footer-section footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section footer-newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for exclusive offers and new arrivals.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+            <div class="footer-section footer-social">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="https://instagram.com/oldwyn1" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/share/1BxHimutCW/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Oldwyn. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const progressSteps = document.querySelectorAll('.progress-step');
+            const checkoutSteps = document.querySelectorAll('.checkout-step');
+            const checkoutForms = document.querySelectorAll('.checkout-form');
+            const placeOrderBtn = document.getElementById('place-order-btn');
+
+            let currentStep = 0; // 0-indexed: Shipping = 0, Payment = 1, Review = 2, Confirmation = 3
+
+            // Mock cart data (in a real app, this would come from local storage or backend)
+            const mockCartItems = [
+                { id: 'OWS-CG-001', name: 'Classic Gold Senator', price: 85000, quantity: 1, size: 'M', color: 'Gold', image: 'assets/images/product-senator-1.jpg' },
+                { id: 'OWS-EG-003', name: 'Emerald Green Design', price: 78000, quantity: 1, size: 'L', color: 'Green', image: 'assets/images/product-senator-3.jpg' }
+            ];
+            const SHIPPING_COST_PER_ITEM = 5000;
+
+            function formatCurrency(amount) {
+                return new Intl.NumberFormat('en-NG', { style: 'currency', currency: 'NGN', minimumFractionDigits: 0 }).format(amount);
+            }
+
+            function updateStepDisplay() {
+                // Update progress bar
+                progressSteps.forEach((step, index) => {
+                    if (index <= currentStep) {
+                        step.classList.add('active');
+                    } else {
+                        step.classList.remove('active');
+                    }
+                });
+
+                // Update content step
+                checkoutSteps.forEach((step, index) => {
+                    if (index === currentStep) {
+                        step.classList.add('active');
+                        // Scroll to top of the step for better UX on smaller screens
+                        step.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    } else {
+                        step.classList.remove('active');
+                    }
+                });
+
+                if (currentStep === 2) { // Review step
+                    populateOrderReview();
+                } else if (currentStep === 3) { // Confirmation step
+                    // Generate a random order ID for display
+                    document.getElementById('order-id').textContent = `OW-${new Date().getFullYear()}-${Math.random().toString(36).substr(2, 4).toUpperCase()}-${Math.floor(1000 + Math.random() * 9000)}`;
+                }
+            }
+
+            function populateOrderReview() {
+                const reviewItemsList = document.querySelector('.review-items-list');
+                reviewItemsList.innerHTML = ''; // Clear previous items
+
+                let subtotal = 0;
+                let itemCount = 0;
+
+                mockCartItems.forEach(item => {
+                    const itemCard = document.createElement('div');
+                    itemCard.classList.add('review-item-card');
+                    itemCard.innerHTML = `
+                        <img src="${item.image}" alt="${item.name}">
+                        <div class="item-details">
+                            <h4>${item.name}</h4>
+                            <p>Size: ${item.size}, Color: ${item.color}</p>
+                            <p>Quantity: ${item.quantity}</p>
+                            <p class="price">${formatCurrency(item.price * item.quantity)}</p>
+                        </div>
+                    `;
+                    reviewItemsList.appendChild(itemCard);
+
+                    subtotal += item.price * item.quantity;
+                    itemCount += item.quantity;
+                });
+
+                const shipping = itemCount > 0 ? (SHIPPING_COST_PER_ITEM * itemCount) : 0;
+                const total = subtotal + shipping;
+
+                document.getElementById('review-subtotal').textContent = formatCurrency(subtotal);
+                document.getElementById('review-shipping').textContent = formatCurrency(shipping);
+                document.getElementById('review-total').textContent = formatCurrency(total);
+            }
+
+            // Handle form submissions for navigation
+            checkoutForms.forEach(form => {
+                form.addEventListener('submit', (event) => {
+                    event.preventDefault(); // Prevent default form submission
+
+                    // Basic validation
+                    const inputs = form.querySelectorAll('input[required]');
+                    let allValid = true;
+                    inputs.forEach(input => {
+                        if (!input.value.trim()) {
+                            allValid = false;
+                            input.classList.add('invalid'); // Add visual cue for invalid input
+                        } else {
+                            input.classList.remove('invalid');
+                        }
+                    });
+
+                    if (!allValid) {
+                        if (window.showToast) {
+                            window.showToast('Please fill in all required fields.', 'error');
+                        }
+                        return; // Stop if not all fields are valid
+                    }
+
+                    // For payment form, ensure a payment method is selected
+                    if (form.id === 'payment-form') {
+                        const selectedPayment = form.querySelector('input[name="paymentMethod"]:checked');
+                        if (!selectedPayment) {
+                            if (window.showToast) {
+                                window.showToast('Please select a payment method.', 'warning');
+                            }
+                            return;
+                        }
+                        // In a real app, you'd process payment info here
+                        if (window.showToast) {
+                            window.showToast(`Payment method selected: ${selectedPayment.value}`, 'success');
+                        }
+                    }
+
+                    // Move to next step
+                    if (currentStep < checkoutSteps.length - 1) {
+                        currentStep++;
+                        updateStepDisplay();
+                        if (window.showToast) {
+                            window.showToast(`Moving to ${progressSteps[currentStep].querySelector('.step-name').textContent} step.`, 'info');
+                        }
+                    }
+                });
+            });
+
+            // Handle 'Back' and 'Place Order' buttons
+            document.querySelectorAll('.form-actions .btn').forEach(button => {
+                button.addEventListener('click', (event) => {
+                    const action = button.dataset.action;
+                    if (action === 'prev') {
+                        if (currentStep > 0) {
+                            currentStep--;
+                            updateStepDisplay();
+                            if (window.showToast) {
+                                window.showToast(`Going back to ${progressSteps[currentStep].querySelector('.step-name').textContent} step.`, 'info');
+                            }
+                        }
+                    } else if (button.id === 'place-order-btn') {
+                        // This is the final "Place Order" button
+                        // In a real app, this would trigger the final order submission to backend
+                        if (window.showToast) {
+                            window.showToast('Placing your order...', 'info', 2000);
+                        }
+                        // Simulate order placement delay before moving to confirmation
+                        setTimeout(() => {
+                            currentStep++;
+                            updateStepDisplay();
+                            if (window.showToast) {
+                                window.showToast('Order Placed Successfully!', 'success', 4000);
+                            }
+                        }, 2500);
+                    }
+                });
+            });
+
+            // Initial display update
+            updateStepDisplay();
+        });
+    </script>
+</body>
+</html>
