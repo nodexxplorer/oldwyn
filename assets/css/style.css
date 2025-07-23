@@ -157,13 +157,13 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     font-family: var(--font-heading);
-    font-size: 1.8em;
+    font-size: 1.6em;
     font-weight: 700;
     color: var(--color-gold);
 }
 
 .logo img {
-    height: 50px;
+    height: 35px;
     margin-right: 10px;
     border-radius: 50%; /* Make the logo round */
     border: 2px solid var(--color-gold);
@@ -175,11 +175,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .main-nav ul {
     display: flex;
-    gap: 40px;
+    gap: 20px;
 }
 
 .main-nav a {
-    font-size: 1.1em;
+    font-size: 1.0em;
     font-weight: 400;
     position: relative;
     padding: 5px 0;
@@ -203,14 +203,14 @@ h1, h2, h3, h4, h5, h6 {
 .header-icons {
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 15px;
 }
 
 .icon-btn {
     background: none;
     border: none;
     color: var(--color-white);
-    font-size: 1.5em;
+    font-size: 1.3em;
     cursor: pointer;
     transition: color var(--transition-speed) ease, transform var(--transition-speed) ease;
     position: relative;
@@ -248,29 +248,7 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1;
 }
 
-.wallet-connect-btn {
-    background-color: var(--color-gold);
-    color: var(--color-black);
-    padding: 10px 20px;
-    border-radius: var(--border-radius-md);
-    font-weight: 600;
-    cursor: pointer;
-    transition: all var(--transition-speed) ease;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    border: none;
-}
 
-.wallet-connect-btn i {
-    font-size: 1.1em;
-}
-
-.wallet-connect-btn:hover {
-    background-color: var(--color-white);
-    color: var(--color-gold);
-    transform: translateY(-2px);
-}
 
 .hamburger-menu {
     display: none; /* Hidden on desktop */
@@ -401,21 +379,6 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-.wallet-connect-btn-mobile {
-    background-color: var(--color-gold);
-    color: var(--color-black) !important;
-    padding: 15px 30px;
-    border-radius: var(--border-radius-md);
-    font-weight: 600;
-    cursor: pointer;
-    transition: all var(--transition-speed) ease;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1.5em !important;
-    margin-top: 20px;
-    text-transform: uppercase;
-}
 
 /* Hero Section */
 .hero-section {
@@ -707,15 +670,15 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .header-icons {
-        gap: 15px;
+        gap: 5px;
     }
 
     .logo {
-        font-size: 1.5em;
+        font-size: 1.3em;
     }
 
     .logo img {
-        height: 40px;
+        height: 30px;
     }
 
     .hero-title {
@@ -723,7 +686,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .hero-overlay {
-        padding: 30px;
+        padding: 10px;
     }
 
     .collections-grid, .testimonial-grid, .footer-content {
@@ -756,7 +719,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 576px) {
     .header-content {
         height: 70px;
-        padding: 0 15px;
+        padding: 0 10px;
     }
 
     .logo {
@@ -764,7 +727,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .logo img {
-        height: 35px;
+        height: 30px;
     }
 
     .hero-title {
@@ -790,7 +753,7 @@ h1, h2, h3, h4, h5, h6 {
 .header-icons {
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 15px;
 }
 
 /* NEW: Style for the login icon button */
