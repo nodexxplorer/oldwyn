@@ -159,7 +159,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     font-size: 1.6em;
     font-weight: 700;
-    color: var(--color-gold);
+    color: var(--color-light-gold);
 }
 
 .logo img {
@@ -171,6 +171,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .logo span {
     text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .main-nav ul {
@@ -203,7 +204,18 @@ h1, h2, h3, h4, h5, h6 {
 .header-icons {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 25px;
+}
+@media (max-width: 768px) {
+    .header-icons {
+        gap: 15px;
+    }
+}
+@media (max-width: 576px) {
+    .header-icons {
+        gap: 12px;
+    }
+    
 }
 
 .icon-btn {
